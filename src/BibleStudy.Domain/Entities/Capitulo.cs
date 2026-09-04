@@ -8,8 +8,13 @@ namespace BibleStudy.Domain.Entities
     public class Capitulo
     {
         public int Id { get; set; }
+
         public int Numero { get; set; }
+
         public int LivroId { get; set; }
-        public Livro Livro { get; set; }
+
+        public Livro Livro { get; set; } = null!;
+
+        public List<Versiculo> Versiculos { get; set; } = new();
     }
 }
